@@ -1,9 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+/*=========
+ Variables
+==========*/
+:root {
+  --darkBlue: hsl(217, 19%, 35%);
+  --mediumBlue: hsl(214, 17%, 51%);
+  --lightBlue: hsl(212, 23%, 69%);
+  --lightGreyBlue: hsl(210, 46%, 95%);
+}
+
+/*===========
+ Base Rulers
+============*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: auto;
+  height: 100vh;
+  font-size: 81.25%;
+  font-family: Manrope, sans-serif;
+  background-color: var(--lightGreyBlue);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main {
+  width: 85%;
+  height: 75%;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*=============
+ Funcionalities
+=============*/
+.split {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*=======
+ Layout
+========*/
+.img-section {
+  width: 100%;
+  height: 40%;
+}
+
+.img-section img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.info-section,
+.review-section {
+  width: 80%;
+}
+
+.info-section {
+  height: auto;
+}
+
+.title,
+.sub-info {
+  height: auto;
+}
+
+.title {
+  margin-top: 3em;
+  margin-bottom: 1em;
+  color: var(--darkBlue);
+  font-size: 0.8em;
+}
+
+.sub-info {
+  color: var(--mediumBlue);
+  line-height: 1.5em;
+  font-weight: 500;
+  margin-bottom: 1em;
+}
+
+.review-section {
+  height: 20%;
+  padding-bottom: 3em;
+  padding-top: 1.5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 1em;
+}
+
+.share-section {
+  height: 20%;
+  width: 100%;
+  padding: 1em 2em 3em 2em;
+  position: relative;
+  bottom: 18.6%;
+  left: 0;
+  background-color: var(--darkBlue);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1em;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 
-a {
+.attribution a {
   color: #3e52a3;
 }
+
+/*========
+ Elements
+=========*/
+.review-section img {
+  width: 70%;
+  max-width: calc(100%);
+  height: auto;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  place-self: center center;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+}
+
+.name {
+  color: var(--darkBlue);
+  font-weight: 700;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / 4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  place-self: end start;
+}
+
+.date {
+  color: var(--lightBlue);
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / 4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+}
+
+.share-btn-container {
+  background-color: var(--lightGreyBlue);
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+  place-self: center center;
+}
+
+.share-btn-container img {
+  width: 1.25em;
+  height: 1.25em;
+}
+
+.share-section p {
+  color: var(--lightBlue);
+  text-transform: uppercase;
+  letter-spacing: .5em;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+  place-self: center center;
+}
+
+.share-section ul {
+  list-style: none;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+  place-self: center center;
+}
+
+.share-section li {
+  margin-right: 1em;
+}
+
+.share-section .share-btn-container {
+  background-color: var(--mediumBlue);
+  width: 3em;
+  height: 3em;
+  margin-left: .1em;
+  border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3 / 5;
+  place-self: center center;
+}
+
+/*====
+ States
+=====*/
 /*# sourceMappingURL=style.css.map */
