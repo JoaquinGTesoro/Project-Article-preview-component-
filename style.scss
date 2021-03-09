@@ -41,6 +41,16 @@ main {
     overflow: hidden;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .1);
+
+    @media(min-width: 1400px) {
+        flex-direction: row;
+        width: 50%;
+        height: 35%;
+        justify-content: center;
+        overflow: visible;
+        z-index: 1;
+    }
 }
 
 /*=============
@@ -63,11 +73,29 @@ main {
         height: 100%;
         object-fit: cover;
     }
+
+    @media(min-width: 1400px) {
+        max-width: 40%;
+        height: 100%;
+        border-radius: 15px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        overflow: hidden;
+        z-index: 2;
+    }
+}
+
+.container {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
 }
 
 .info-section,
 .review-section {
-    width: 80%;
+    width: 85%;
 }
 
 .info-section {
@@ -84,6 +112,11 @@ main {
     margin-bottom: 1em;
     color: var(--darkBlue);
     font-size: 0.8em;
+
+    @media(min-width: 1400px) {
+        margin-top: 2em;
+        font-size: 1em;
+    }
 }
 
 .sub-info {
@@ -91,6 +124,10 @@ main {
     line-height: 1.5em;
     font-weight: 500;
     margin-bottom: 1em;
+
+    @media(min-width: 1400px) {
+        margin-bottom: 1.5em;
+    }
 }
 
 .review-section {
@@ -102,12 +139,17 @@ main {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 1em;
+
+    @media(min-width: 1400px) {
+        padding: 0;
+        margin-bottom: 0
+    }
 }
 
 .share-section {
     height: 20%;
     width: 0%;
-    opacity: 0.5;
+    opacity: 0;
     padding: 1em 2em 3em 2em;
     position: relative;
     bottom: 18.6%;
@@ -118,6 +160,22 @@ main {
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 1em;
     z-index: -1;
+
+    
+    @media (min-width: 1400px) {
+        width: 55%;
+        height: 20%;
+        bottom: 40%;
+        left: 35%;
+        border-radius: 10px;
+        padding: 1em 1.5em;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 0.5;
+        box-shadow: -1px 3px 10px rgba(0, 0, 0, .2);
+        transition: opacity .5s;
+        z-index: 0;
+        opacity: 0;
+    }
 }
 
 .attribution { 
@@ -135,11 +193,11 @@ main {
 
 .review-section img {
     width: 70%;
-    max-width: calc(100%);
+    max-width: 3em;
     height: auto;
     border-radius: 50%;
     object-fit: cover;
-    place-self: center center;
+    place-self: center start;
     grid-column: 1 / 2;
     grid-row: 1 / 3;
 }
@@ -150,12 +208,20 @@ main {
     grid-column: 2 / 4;
     grid-row: 1 / 2;
     place-self: end start;
+
+    @media(min-width: 1400px) {
+        margin-left: -3em;
+    }
 }
 
 .date {
     color: var(--lightBlue);
     grid-column: 2 / 4;
     grid-row: 2 / 3;
+
+    @media(min-width: 1400px) {
+        margin-left: -3em;
+    }
 }
 
 .share-btn-container {
@@ -167,12 +233,19 @@ main {
     place-content: center;
     grid-column: 4 / 5;
     grid-row: 1 / 3;
-    place-self: center center;
+    place-self: center end;
     cursor: pointer;
 
-    img {
-        width: 1.25em;
-        height: 1.25em;
+    svg {
+        fill: #6E8098;
+    }
+
+    @media(min-width: 1400px) {
+        transition: background-color .5s;
+
+        svg {
+            transition: fill .5s;
+        }
     }
 }
 
@@ -198,7 +271,7 @@ main {
     }
     
     .share-btn-container {
-        background-color: var(--mediumBlue);;
+        background-color: var(--mediumBlue);
         width: 3em;
         height: 3em;
         margin-left: .1em;
@@ -208,6 +281,36 @@ main {
         grid-column: 3 / 5;
         place-self: center center;
         cursor: pointer;
+    }
+
+    .triangle {
+        display: none;
+    }
+
+    @media(min-width: 1400px) {
+        .share-btn-container {
+            display: none;
+        }
+
+        p {
+            place-self: center end;
+        }
+
+        li {
+            place-self: center start;
+        }
+
+        .triangle {
+            display: inline;
+            width: 30px;
+            height: 15px;
+            background-color: inherit;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            transform: rotate(180deg);
+            position: relative;
+            top: 100%;
+            left: 115%;
+        }
     }
 }
 
@@ -219,9 +322,30 @@ main {
     width: 100%;
     opacity: 1;
     z-index: 1;
+
+    @media(min-width: 1400px) {
+        width: auto;
+        opacity: 1;
+        z-index: 2;
+    }
 }
 
 .review-section.shift {
     width: 0%;
     opacity: 0;
+
+    @media(min-width: 1400px) {
+        width: 85%;
+        opacity: 1;
+    }
+}
+
+@media(min-width: 1400px) {
+    .share-btn-container.shift {
+        background-color: var(--mediumBlue);
+        
+        svg {
+            fill: #fff;
+        }
+    }
 }
