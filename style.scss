@@ -36,6 +36,8 @@ body {
 main {
     width: 85%;
     height: 75%;
+    max-width: calc(25em);
+    max-height: calc(35em);
     background-color: white;
     border-radius: 15px;
     overflow: hidden;
@@ -43,10 +45,12 @@ main {
     align-items: center;
     box-shadow: 0 3px 10px rgba(0, 0, 0, .1);
 
-    @media(min-width: 1400px) {
+    @media(min-width: 800px) {
         flex-direction: row;
         width: 50%;
         height: 35%;
+        min-width: calc(54em);
+        min-height: calc(21.75em);
         justify-content: center;
         overflow: visible;
         z-index: 1;
@@ -74,7 +78,7 @@ main {
         object-fit: cover;
     }
 
-    @media(min-width: 1400px) {
+    @media(min-width: 800px) {
         max-width: 40%;
         height: 100%;
         border-radius: 15px;
@@ -113,7 +117,7 @@ main {
     color: var(--darkBlue);
     font-size: 0.8em;
 
-    @media(min-width: 1400px) {
+    @media(min-width: 800px) {
         margin-top: 2em;
         font-size: 1em;
     }
@@ -125,7 +129,7 @@ main {
     font-weight: 500;
     margin-bottom: 1em;
 
-    @media(min-width: 1400px) {
+    @media(min-width: 800px) {
         margin-bottom: 1.5em;
     }
 }
@@ -140,7 +144,7 @@ main {
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 1em;
 
-    @media(min-width: 1400px) {
+    @media(min-width: 800px) {
         padding: 0;
         margin-bottom: 0
     }
@@ -162,7 +166,7 @@ main {
     z-index: -1;
 
     
-    @media (min-width: 1400px) {
+    @media (min-width: 800px) {
         width: 55%;
         height: 20%;
         bottom: 40%;
@@ -209,7 +213,7 @@ main {
     grid-row: 1 / 2;
     place-self: end start;
 
-    @media(min-width: 1400px) {
+    @media(min-width: 800px) {
         margin-left: -3em;
     }
 }
@@ -219,7 +223,7 @@ main {
     grid-column: 2 / 4;
     grid-row: 2 / 3;
 
-    @media(min-width: 1400px) {
+    @media(min-width: 800px) {
         margin-left: -3em;
     }
 }
@@ -240,7 +244,7 @@ main {
         fill: #6E8098;
     }
 
-    @media(min-width: 1400px) {
+    @media(min-width: 800px) {
         transition: background-color .5s;
 
         svg {
@@ -287,7 +291,7 @@ main {
         display: none;
     }
 
-    @media(min-width: 1400px) {
+    @media(min-width: 800px) {
         .share-btn-container {
             display: none;
         }
@@ -323,7 +327,7 @@ main {
     opacity: 1;
     z-index: 1;
 
-    @media(min-width: 1400px) {
+    @media(min-width: 800px) {
         width: auto;
         opacity: 1;
         z-index: 2;
@@ -334,13 +338,13 @@ main {
     width: 0%;
     opacity: 0;
 
-    @media(min-width: 1400px) {
+    @media(min-width: 800px) {
         width: 85%;
         opacity: 1;
     }
 }
 
-@media(min-width: 1400px) {
+@media(min-width: 800px) {
     .share-btn-container.shift {
         background-color: var(--mediumBlue);
         

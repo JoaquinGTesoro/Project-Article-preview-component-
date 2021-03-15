@@ -14,5 +14,6 @@ shareBtn.forEach(button => {
     button.addEventListener('click', () => {
         shareSection.classList.toggle("shift");
         reviewSection.classList.toggle("shift");
+        button.classList.toggle("shift");
     });
 })

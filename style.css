@@ -42,6 +42,8 @@ body {
 main {
   width: 85%;
   height: 75%;
+  max-width: calc(25em);
+  max-height: calc(35em);
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
@@ -56,7 +58,7 @@ main {
           box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 800px) {
   main {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -64,6 +66,8 @@ main {
             flex-direction: row;
     width: 50%;
     height: 35%;
+    min-width: calc(54em);
+    min-height: calc(21.75em);
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -96,7 +100,7 @@ main {
      object-fit: cover;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 800px) {
   .img-section {
     max-width: 40%;
     height: 100%;
@@ -142,7 +146,7 @@ main {
   font-size: 0.8em;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 800px) {
   .title {
     margin-top: 2em;
     font-size: 1em;
@@ -156,7 +160,7 @@ main {
   margin-bottom: 1em;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 800px) {
   .sub-info {
     margin-bottom: 1.5em;
   }
@@ -177,7 +181,7 @@ main {
   grid-column-gap: 1em;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 800px) {
   .review-section {
     padding: 0;
     margin-bottom: 0;
@@ -203,7 +207,7 @@ main {
   z-index: -1;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 800px) {
   .share-section {
     width: 55%;
     height: 20%;
@@ -263,7 +267,7 @@ main {
   place-self: end start;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 800px) {
   .name {
     margin-left: -3em;
   }
@@ -279,7 +283,7 @@ main {
   grid-row: 2 / 3;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 800px) {
   .date {
     margin-left: -3em;
   }
@@ -307,7 +311,7 @@ main {
   fill: #6E8098;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 800px) {
   .share-btn-container {
     -webkit-transition: background-color .5s;
     transition: background-color .5s;
@@ -366,7 +370,7 @@ main {
   display: none;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 800px) {
   .share-section .share-btn-container {
     display: none;
   }
@@ -400,7 +404,7 @@ main {
   z-index: 1;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 800px) {
   .share-section.shift {
     width: auto;
     opacity: 1;
@@ -413,14 +417,14 @@ main {
   opacity: 0;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 800px) {
   .review-section.shift {
     width: 85%;
     opacity: 1;
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 800px) {
   .share-btn-container.shift {
     background-color: var(--mediumBlue);
   }
